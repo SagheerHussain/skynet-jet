@@ -1,6 +1,6 @@
-export default function Button({ buttonLabel }) {
+export default function Button({ buttonLabel, isWidthFull = false }) {
   return (
-    <button className="btn-main">
+    <button className={isWidthFull ? "btn-main w-full" : "btn-main"}>
       {/* Background layers */}
       <span></span>
 

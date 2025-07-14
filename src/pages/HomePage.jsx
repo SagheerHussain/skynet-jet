@@ -1,12 +1,13 @@
 import React from 'react'
 import Showcase from '../components/Showcase'
-import Carousel from '../components/Carousel'
+import Slider from '../components/Slider'
+import Bouncing from '../components/Bouncing'
 
 const HomePage = () => {
   return (
     <>
       <Showcase />
-      {/* <Carousel /> */}
+      <Slider />
     </>
   )
 }
