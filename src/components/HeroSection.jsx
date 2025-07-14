@@ -69,7 +69,7 @@ const HeroSection = () => {
               <GlassCard />
             </div>
             <div
-              className="lg:w-[20%] lg:relative 3xl:h-[calc(90vh-270px)] 2xl:h-[calc(90vh-150px)] xl:h-[calc(90vh-120px)] lg:h-[calc(90vh-0px)] extra-sm:h-[30vh] h-screen w-full flex lg:flex-col extra-sm:flex-row flex-col items-center justify-center lg:space-x-0 extra-sm:space-x-4 lg:space-y-12 extra-sm:space-y-20 space-y-4"
+              className="lg:w-[20%] lg:relative 3xl:h-[calc(90vh-270px)] 2xl:h-[calc(90vh-150px)] xl:h-[calc(90vh-120px)] lg:h-[90vh] extra-sm:h-[30vh] h-screen w-full flex lg:flex-col extra-sm:flex-row flex-col items-center justify-center lg:space-x-0 extra-sm:space-x-4 lg:space-y-12 extra-sm:space-y-20 space-y-4"
               ref={cardsWrapperRef}
             >
               {/* 3 Glassmorphism Circular Cards with responsive positions and sizes */}
@@ -83,7 +83,7 @@ const HeroSection = () => {
                     className="-rotate-45 -mt-8"
                   />
                 }
-                customClasses="w-full h-full mt-20"
+                customClasses="w-full h-full lg:mt-0 mt-20"
               />
               <GlassmorphismCircularCard
                 title="Buy My Plane"
