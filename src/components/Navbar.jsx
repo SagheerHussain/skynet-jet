@@ -6,7 +6,13 @@ const Navbar = () => {
   return (
     <nav className="w-full px-6 text-white flex items-center justify-between z-20 h-[10vh]">
       <div className="logo pt-10 ">
-        <img src="../../public/assets/logo.png 2x" className="w-60" alt="" />
+        <img
+          src={
+            "https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%201x,%20https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_360,h_130,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%202x"
+          }
+          className="w-60"
+          alt=""
+        />
       </div>
       <div
         className="nav-menus
@@ -24,19 +30,44 @@ const Navbar = () => {
       >
         <ul className="flex space-x-6">
           <li className="me-3">
-            <a href="" className="uppercase text-[.9rem] transition hover:text-[#ff8a41]">Showroom</a>
+            <a
+              href=""
+              className="uppercase text-[.9rem] transition hover:text-[#ff8a41]"
+            >
+              Showroom
+            </a>
           </li>
           <li className="me-3">
-            <a href="" className="uppercase text-[.9rem] transition hover:text-[#ff8a41]">Services +</a>
+            <a
+              href=""
+              className="uppercase text-[.9rem] transition hover:text-[#ff8a41]"
+            >
+              Services +
+            </a>
           </li>
           <li className="me-3">
-            <a href="" className="uppercase text-[.9rem] transition hover:text-[#ff8a41]">Skynet</a>
+            <a
+              href=""
+              className="uppercase text-[.9rem] transition hover:text-[#ff8a41]"
+            >
+              Skynet
+            </a>
           </li>
           <li className="me-3">
-            <a href="" className="uppercase text-[.9rem] transition hover:text-[#ff8a41]">About MA +</a>
+            <a
+              href=""
+              className="uppercase text-[.9rem] transition hover:text-[#ff8a41]"
+            >
+              About MA +
+            </a>
           </li>
           <li className="me-3">
-            <a href="" className="uppercase text-[.9rem] transition hover:text-[#ff8a41]">Contact</a>
+            <a
+              href=""
+              className="uppercase text-[.9rem] transition hover:text-[#ff8a41]"
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </div>
@@ -46,6 +77,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
