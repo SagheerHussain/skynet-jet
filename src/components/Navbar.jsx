@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBox from "./SearchBox";
 import { TbMenu } from "react-icons/tb";
+import GlassNavbar from "./GlassNavbar";
 
 const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ const Navbar = () => {
           alt=""
         />
       </div>
-      <div
+      {/* <div
         className="nav-menus
         px-10
         py-4
@@ -70,7 +71,9 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-      </div>
+      </div> */}
+
+      <GlassNavbar />
       <div className="flex items-center call-to-action mt-10">
         <SearchBox />
         <TbMenu size={40} className="ms-4 xl:hidden block" color="#fff" />

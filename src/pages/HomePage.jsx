@@ -1,13 +1,14 @@
 import React from 'react'
 import Showcase from '../components/Showcase'
 import Slider from '../components/Slider'
-import Bouncing from '../components/Bouncing'
+import Listing from '../components/Listing'
 
 const HomePage = () => {
   return (
     <>
       <Showcase />
       <Slider />
+      <Listing />
     </>
   )
 }
