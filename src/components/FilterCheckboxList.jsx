@@ -63,7 +63,7 @@ export default function FilterCheckboxList({
         <h3 className="text-sm font-semibold text-white mb-4">Price Range</h3>
 
         <div className="mb-2 text-gray-300 text-sm">
-          {range[0].toLocaleString()} PKR – {range[1].toLocaleString()} PKR
+          ${range[0].toLocaleString()} – ${range[1].toLocaleString()}
         </div>
 
         <Slider
