@@ -4,12 +4,12 @@ import Button from "./Button";
 
 const Card = ({ detail, index }) => {
   const categoryGradients = {
-    acquired: ["from-[#3b82f6]", "to-[#60a5fa]"],
-    "coming soon": ["from-[#9333ea]", "to-[#c084fc]"],
-    "for sale": ["from-[#10b981]", "to-[#34d399]"],
-    "off market": ["from-[#ff8a41]", "to-[#ff8a41]"],
-    "sale pending": ["from-[#ff8a41]", "to-[#ce93d8]"],
-    sold: ["from-[#ef4444]", "to-[#f87171]"],
+    acquired: ["from-[#3b82f6]", "to-[#7eb0fc]"],
+    "coming-soon": ["from-[#9333ea]", "to-[#c084fc]"],
+    "for-sale": ["from-[#6bfc3f]", "to-[#a5fc8a]"],
+    "off-market": ["from-[#4e54fc]", "to-[#8f93fc]"],
+    "sale-pending": ["from-[#9a2c3a]", "to-[#ce93d8]"],
+    sold: ["from-[#ff0000]", "to-[#fc6262]"],
     wanted: ["from-[#f97316]", "to-[#fb923c]"],
   };
 
@@ -35,7 +35,7 @@ const Card = ({ detail, index }) => {
     >
       {/* Featured Ribbon */}
       <div
-        className={`absolute top-6 -right-14 w-48 text-center rotate-45 bg-gradient-to-r ${gradient[0]} ${gradient[1]} text-white font-medium py-1 shadow-lg`}
+        className={`absolute top-6 -right-14 w-48 text-center rotate-45 bg-gradient-to-r ${gradient[0]} ${gradient[1]} ${categoryName === 'for-sale' ? 'text-black' : 'text-white'} font-medium py-1 shadow-lg`}
       >
         <h1 className="text-[.8rem]">
           {detail?.category
