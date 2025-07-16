@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import FilterCheckboxList from "./FilterCheckboxList";
 import Card from "./Card";
+import Tabs from "./Tabs";
+import Pagination from "./Pagination";
 
 const airplanes = [
   {
@@ -135,24 +138,35 @@ const airplanes = [
   },
 ];
 
-const filteredAirplanesPrices = airplanes.filter((a) => a.price >= 100000);
-const uniquePrice = [...new Set(filteredAirplanesPrices.map((a) => a.price))];
+const categories = [
+  { name: "Acquired", slug: "acquired" },
+  { name: "For Sale", slug: "for-sale" },
+  { name: "Off Market", slug: "off-market" },
+  { name: "Wanted", slug: "wanted" },
+  { name: "Sold", slug: "sold" },
+  { name: "Sale Pending", slug: "sale-pending" },
+  { name: "Coming Soon", slug: "coming-soon" },
+];
 
 const Listing = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
+  const [activeTab, setActiveTab] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
 
   const allPrices = airplanes.map((a) => a.price);
   const minPrice = Math.min(...allPrices);
   const maxPrice = Math.max(...allPrices);
-
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
-  console.log(priceRange);
 
   const airplaneMatchesFilters = (airplane) => {
     const matchesPrice =
       airplane.price >= priceRange[0] && airplane.price <= priceRange[1];
 
-    if (selectedFilters.length === 0) return matchesPrice;
+    const matchesCategory =
+      activeTab === "all" ? true : airplane.category === activeTab;
+
+    if (selectedFilters.length === 0) return matchesCategory && matchesPrice;
 
     const filters = [
       airplane.category,
@@ -163,10 +177,22 @@ const Listing = () => {
 
     const matchesCheckbox = selectedFilters.some((f) => filters.includes(f));
 
-    return matchesCheckbox && matchesPrice;
+    return matchesCheckbox && matchesCategory && matchesPrice;
   };
 
   const filteredAirplanes = airplanes.filter(airplaneMatchesFilters);
+
+  const totalPages = Math.ceil(filteredAirplanes.length / itemsPerPage);
+
+  const paginatedAirplanes = filteredAirplanes.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  // Reset to page 1 when filters or tab change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedFilters, priceRange, activeTab]);
 
   return (
     <section id="showroom" className="py-20">
@@ -183,6 +209,15 @@ const Listing = () => {
           </p>
         </div>
 
+        {/* Tabs */}
+        <div className="animated-tabs mb-12">
+          <Tabs
+            categories={categories}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+        </div>
+
         <div className="flex">
           <div className="w-[20%]">
             <FilterCheckboxList
@@ -192,19 +227,32 @@ const Listing = () => {
               setRange={setPriceRange}
               minPrice={minPrice}
               maxPrice={maxPrice}
+              categories={categories}
             />
           </div>
           <div className="w-[75%] ms-[5%]">
-            {filteredAirplanes.length === 0 && (
+            {filteredAirplanes.length === 0 ? (
               <div className="flex justify-center items-center">
                 <p className="text-white text-lg">No airplanes found.</p>
               </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {paginatedAirplanes.map((airplane) => (
+                    <Card key={airplane._id} detail={airplane} />
+                  ))}
+                </div>
+
+                <div className="flex justify-center mt-10">
+                  <Pagination
+                    count={totalPages}
+                    page={currentPage}
+                    onChange={(e, value) => setCurrentPage(value)}
+                    color="primary"
+                  />
+                </div>
+              </>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredAirplanes.map((airplane) => (
-                <Card key={airplane._id} detail={airplane} />
-              ))}
-            </div>
           </div>
         </div>
       </div>

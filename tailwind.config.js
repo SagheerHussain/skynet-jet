@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -17,7 +14,16 @@ export default {
         "1.5xl": "1450px",
         "extra-sm": "500px",
       },
+      keyframes: {
+        shine: {
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
+        },
+      },
+      animation: {
+        shine: "shine 5s linear infinite",
+      },
     },
   },
   plugins: [],
-}
+};

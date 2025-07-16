@@ -2,18 +2,21 @@ import React from "react";
 import SearchBox from "./SearchBox";
 import { TbMenu } from "react-icons/tb";
 import GlassNavbar from "./GlassNavbar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="w-full px-6 text-white flex items-center justify-between z-20 h-[10vh]">
       <div className="logo pt-10 ">
-        <img
-          src={
-            "https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%201x,%20https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_360,h_130,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%202x"
-          }
-          className="w-60"
-          alt=""
-        />
+        <Link to={"/"}>
+          <img
+            src={
+              "https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%201x,%20https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_360,h_130,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png%202x"
+            }
+            className="w-60"
+            alt=""
+          />
+        </Link>
       </div>
       {/* <div
         className="nav-menus

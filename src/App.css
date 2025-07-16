@@ -129,7 +129,6 @@ body {
   }
 }
 
-
 .liquid-glass {
   padding: 20px 5px;
   width: 100%;
@@ -149,7 +148,7 @@ body {
 
 .liquid-glass--bend {
   -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(6px);
   filter: url(#filter);
   z-index: 0;
 }
@@ -160,8 +159,8 @@ body {
 } */
 
 .liquid-glass--edge {
-  box-shadow: inset 3px 3px 3px 0 rgba(255, 255, 255, .2),
-    inset -3px -3px 3px 0 rgba(255, 255, 255, .2);
+  box-shadow: inset 3px 3px 3px 0 rgba(255, 255, 255, 0.2),
+    inset -3px -3px 3px 0 rgba(255, 255, 255, 0.2);
   z-index: 2;
 }
 
@@ -298,7 +297,6 @@ body {
   animation: wave-x 2s ease-in-out infinite;
 }
 
-
 .app {
   font-family: sans-serif;
   display: flex;
@@ -313,7 +311,7 @@ body {
   background: #fff;
   padding: 20px 40px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .box h3 {
@@ -368,7 +366,7 @@ body {
   background: #fff;
   padding: 20px 40px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .box h3 {
@@ -407,4 +405,14 @@ body {
 
 .track-1 {
   background-color: #262626;
+}
+
+.MuiPaginationItem-circular {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+.MuiPaginationItem-circular.Mui-selected {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
 }

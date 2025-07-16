@@ -2,15 +2,6 @@ import React from "react";
 import Slider from "react-slider";
 import CheckBoxGroup from "./CheckBoxGroup";
 
-const categories = [
-  "acquired",
-  "coming-soon",
-  "for-sale",
-  "off-market",
-  "sale-pending",
-  "sold",
-  "wanted",
-];
 const airframes = ["2500", "5000", "7500"];
 const engine = ["2665", "3517/3421", "220", "3710", "380/380"];
 const prices = [100000, 175000, 379000, 919900, 379000];
@@ -20,8 +11,9 @@ export default function FilterCheckboxList({
   setSelected,
   range,
   setRange,
+  categories,
 }) {
-  const uniqueCategories = [...new Set(categories)];
+  const uniqueCategories = [...new Set(categories.map((c) => c.name))];
   const uniqueAirframes = [...new Set(airframes)];
   const uniqueEngine = [...new Set(engine)];
 
@@ -37,13 +29,6 @@ export default function FilterCheckboxList({
   return (
     <div className="p-6 rounded-2xl border border-[#ffffff48]">
       <h3 className="text-white font-medium mb-4">Filter Options</h3>
-
-      <CheckBoxGroup
-        title="Category"
-        items={uniqueCategories}
-        selected={selected}
-        onChange={handleSelect}
-      />
 
       <CheckBoxGroup
         title="Airframes"

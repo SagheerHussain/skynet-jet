@@ -94,7 +94,7 @@ const Slider = () => {
           onSlideChange={(swiper) => {
             setActiveIndex(swiper.activeIndex);
           }}
-          className="mySwiper"
+          className="mySwiper z-[1]"
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -121,12 +121,13 @@ const Slider = () => {
                     <motion.div
                       className="liquid-glass flex flex-col justify-center z-[0]"
                       initial={{ y: -200, scale: 0.8 }}
-                      animate={{ y: 0, scale: 1 }}
-                      viewport={{ once: true }}
+                      // animate={{ y: 0, scale: 1 }}
+                      viewport={{ once: false }}
+                      whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
                         duration: 5,
-                        delay: 1.0,
+                        delay: 0.4,
                       }}
                     >
                       <div className="liquid-glass--bend z-[0]" />
@@ -153,12 +154,12 @@ const Slider = () => {
                     <motion.div
                       className="w-1/2 h-[150px] relative z-[9999]"
                       initial={{ y: -200, scale: 0.8 }}
-                      viewport={{ once: true }}
-                      animate={{ y: 0, scale: 1 }}
+                      viewport={{ once: false }}
+                      whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
                         duration: 5,
-                        delay: 0.5,
+                        delay: 0.2,
                       }}
                     >
                       <div className="liquid-glass flex flex-col justify-center z-[0]">
@@ -187,12 +188,12 @@ const Slider = () => {
                     <motion.div
                       className="w-1/2 h-[150px] relative z-[9999]"
                       initial={{ y: -200, scale: 0.8 }}
-                      viewport={{ once: true }}
-                      animate={{ y: 0, scale: 1 }}
+                      viewport={{ once: false }}
+                      whileInView={{ y: 0, scale: 1 }}
                       transition={{
                         ...springDrop,
                         duration: 5,
-                        delay: 0.8,
+                        delay: 0.2,
                       }}
                     >
                       <div className="liquid-glass flex flex-col justify-center z-[0]">
@@ -216,8 +217,9 @@ const Slider = () => {
                   {/* RED BOX (Description) */}
                   <motion.div
                     initial={{ y: -200, scale: 0.8 }}
-                    animate={{ y: 0, scale: 1 }}
-                    viewport={{ once: true }}
+                    // animate={{ y: 0, scale: 1 }}
+                    whileInView={{ y: 0, scale: 1 }}
+                    viewport={{ once: false }}
                     transition={{
                       ...springDrop,
                       duration: 5,

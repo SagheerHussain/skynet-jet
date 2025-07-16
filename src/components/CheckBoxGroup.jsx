@@ -40,14 +40,7 @@ const CheckBoxGroup = ({ title, items, selected, onChange }) => {
                     </svg>
                   )}
                 </div>
-                <span className="text-white text-base ms-3">
-                  {title !== "Category"
-                    ? item
-                    : item
-                        ?.split("-")
-                        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                        .join(" ")}
-                </span>
+                <span className="text-white text-base ms-3">{item}</span>
               </label>
             </li>
           );

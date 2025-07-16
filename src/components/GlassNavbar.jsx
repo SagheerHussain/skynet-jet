@@ -1,9 +1,10 @@
 import React from "react";
 import "../glass.css";
+import { Link } from "react-router-dom";
 
 const GlassPlayer = () => {
   return (
-    <div className="mt-10 fixed z-[99] left-1/2 -translate-x-1/2">
+    <div className="mt-10 fixed z-[9999] xl:block hidden left-1/2 -translate-x-1/2">
       {/* SVG filter definition */}
       <svg style={{ display: "none" }}>
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
@@ -26,7 +27,7 @@ const GlassPlayer = () => {
       </svg>
 
       <div className="container py-10 flex justify-center">
-        <div className="glass-container glass-container--rounded px-6 py-3">
+        <div className="glass-container glass-container--rounded px-4 py-3">
           <div className="glass-filter"></div>
           <div className="glass-overlay"></div>
           <div className="glass-specular"></div>
@@ -35,12 +36,12 @@ const GlassPlayer = () => {
             <nav className="nav-menus">
               <ul className="flex items-center justify-center gap-8">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/showroom"
                     className="uppercase text-[.9rem] font-semibold transition hover:text-[#ff8a41]"
                   >
                     Showroom
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a

@@ -1,5 +1,7 @@
 import HomePage from "./HomePage";
+import ShowroomPage from "./ShowroomPage";
 
 export {
-    HomePage
+    HomePage,
+    ShowroomPage
 };

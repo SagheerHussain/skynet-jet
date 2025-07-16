@@ -1,14 +1,16 @@
 import React from 'react'
 import Showcase from '../components/Showcase'
-import Slider from '../components/Slider'
-import Listing from '../components/Listing'
+import Brands from '../components/Brands'
+import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
     <>
       <Showcase />
-      <Slider />
-      <Listing />
+      <Brands />
+      <Contact />
+      <Footer />
     </>
   )
 }
