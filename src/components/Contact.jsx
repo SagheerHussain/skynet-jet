@@ -9,6 +9,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Button from "./Button";
+import contactBanner from "/images/contact.png";
 
 const Contact = () => {
   return (
@@ -17,7 +18,7 @@ const Contact = () => {
         id="contact"
         style={{
           background:
-            "url(https://img.freepik.com/premium-photo/world-map-dark-night-sky-background-backdrop-banner-show-global-business-world-atlas-worldwide-business-travel-map-earth-space-round-dot-world-map-sharp-space-background_45716-117.jpg)",
+            `url(${contactBanner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -65,9 +66,9 @@ const Contact = () => {
                         info@masonamelia.com
                       </a>
                     </div>
-                    <div className="flex items-center gap-3 mb-6 text-white">
-                      <FaMapMarkerAlt className="text-lg" />
-                      <span>
+                    <div className="flex gap-3 mb-6 pt-1 text-white">
+                      <FaMapMarkerAlt className="text-lg mt-1" />
+                      <span className="max-w-sm">
                         Birmingham, AL Duluth, MN San Antonio, TX Scottsdale, AZ
                         Upstate, NY
                       </span>

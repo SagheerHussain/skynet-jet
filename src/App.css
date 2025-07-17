@@ -416,3 +416,21 @@ body {
   border-color: rgba(255, 255, 255, 0.3) !important;
   color: #ffffff !important;
 }
+
+#gallary .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#gallary .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+}
+
+#gallary .swiper-slide img {
+  display: block;
+  width: 100%;
+}
