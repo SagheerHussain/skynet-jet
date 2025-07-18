@@ -125,7 +125,7 @@ export default function GlassCard({ icon, title, description, buttonLabel }) {
 
         {/* Button */}
         <div ref={buttonRef} className="text-start">
-          <Button buttonLabel="Visit Showroom" />
+          <Button buttonLabel="Visit Showroom" onClick="/showroom" />
         </div>
       </div>
     </div>

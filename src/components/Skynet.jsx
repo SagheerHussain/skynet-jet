@@ -38,7 +38,7 @@ const Skynet = () => {
               </li>
             </ol>
             <div className="mt-6">
-              <Button buttonLabel="Request Valuation" />
+              <Button buttonLabel="Request Valuation" onClick="/contact" />
             </div>
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-10">
               <img

@@ -25,8 +25,9 @@ const SliderWrapper = () => {
         {/* 🔵 Curved overlay full width with curve on both ends */}
 
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           pagination={pagination}
+          navigation
           className="mySwiper"
         >
           {[bannerOne, bannerTwo, bannerThree].map((banner) => (
@@ -76,7 +77,7 @@ const SliderWrapper = () => {
                           Aircraft transactions are complex and involve
                           significant financial exposure.
                         </h2>
-                        <Button buttonLabel="Let Us Help" />
+                        <Button buttonLabel="Let Us Help" onClick="/contact" />
                       </div>
                     </div>
                   </div>

@@ -100,7 +100,7 @@ const MeetTheTeam = () => {
                 </div>
               </div>
               <div className="mt-8">
-                <Button buttonLabel="Meet The Team" isWidthFull={true} />
+                <Button buttonLabel="Meet The Team" isWidthFull={true} onClick="/team" />
               </div>
             </div>
             <div className="team-banner w-[70%] grayscale-[100%] hover:grayscale-0 transition-all duration-500">

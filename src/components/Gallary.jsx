@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Thumbs, FreeMode } from "swiper/modules";
+import { EffectCoverflow, Pagination, Thumbs, FreeMode, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -107,7 +107,8 @@ const Gallary = () => {
               modifier: 4,
               slideShadows: true,
             }}
-            modules={[EffectCoverflow]}
+            modules={[EffectCoverflow, Navigation]}
+            navigation
             className="mySwiper"
           >
             {videoList.map((video,index) => (

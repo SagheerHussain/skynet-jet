@@ -46,7 +46,7 @@ const Acquisition = () => {
               </li>
             </ol>
             <div className="mt-6">
-              <Button buttonLabel="V1 Rotate" />
+              <Button buttonLabel="V1 Rotate" onClick="/contact" />
             </div>
           </div>
         </div>

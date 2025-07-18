@@ -100,7 +100,7 @@ const Footer = () => {
 
       <div className="container px-5">
         <div className="w-full mt-12 border-t border-white/20 pt-4 flex justify-between text-white text-xl">
-          <p>© 2025 Mason Amelia. All rights reserved.</p>
+          <p className="text-base">© 2025 Mason Amelia. All rights reserved.</p>
           <div className="social-icons flex items-center gap-4">
             <FaLinkedinIn className="hover:text-blue-400 cursor-pointer" />
             <FaFacebookF className="hover:text-blue-400 cursor-pointer" />

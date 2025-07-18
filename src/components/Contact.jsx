@@ -10,15 +10,28 @@ import {
 } from "react-icons/fa";
 import Button from "./Button";
 import contactBanner from "/images/contact.png";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+  const location = useLocation();
+
   return (
     <>
       <section
         id="contact"
         className="bg-cover relative z-[1] pt-10"
+        style={{
+          backgroundImage: `${location.pathname !== "/contact" ? `url(${contactBanner})` : "none"}`,
+          backgroundSize: `${location.pathname !== "/contact" ? "cover" : ""}`,
+          backgroundPosition: `${location.pathname !== "/contact" ? "center" : ""}`,
+          backgroundRepeat: `${location.pathname !== "/contact" ? "no-repeat" : ""}`,
+        }}
       >
-        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[0]"></div> */}
+        {
+          location.pathname !== "/contact" && (
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[0]"></div>
+          )
+        }
         {/* Contact Section */}
         <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}

@@ -34,7 +34,7 @@ const opacity = useTransform(scrollYProgress, [0, 0.5, 0.7, 1], [0, 1, 1, 0]);
               precision and performance. <br />
               Connect with us to elevate your mission to new heights.
             </p>
-            <Button buttonLabel="Contact Us" />
+            <Button buttonLabel="Contact Us" onClick="/contact" />
           </div>
         </div>
       </motion.div>

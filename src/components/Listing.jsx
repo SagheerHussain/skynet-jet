@@ -233,7 +233,7 @@ const Listing = () => {
           <div className="w-[75%] ms-[5%]">
             {filteredAirplanes.length === 0 ? (
               <div className="flex justify-center items-center">
-                <p className="text-white text-lg">No airplanes found.</p>
+                <p className="text-white text-lg">No data found.</p>
               </div>
             ) : (
               <>

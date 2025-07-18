@@ -445,3 +445,24 @@ body {
 .team-card:hover {
   transform: translateY(-5px);
 }
+.swiper-button-prev,
+.swiper-button-next {
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #ffffff;
+  font-size: 16px !important;
+
+}
+.swiper-button-prev::after {
+  transform: translateX(10px);
+}
+.swiper-button-next::after {
+  transform: translateX(-10px);
+}

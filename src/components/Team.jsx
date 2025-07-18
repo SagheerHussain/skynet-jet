@@ -94,7 +94,8 @@ const TeamSection = () => {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        modules={[EffectCoverflow]}
+        modules={[EffectCoverflow, Navigation]}
+        navigation
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 50,
