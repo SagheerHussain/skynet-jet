@@ -3,7 +3,8 @@ import Slider from "../components/Slider";
 import Listing from "../components/Listing";
 import Banner from "../components/Banner";
 import CTA from "../components/CTA";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer";  
+import ScrollToTop from "../components/ScrollToTop";
 
 const ShowroomPage = () => {
   return (
@@ -13,6 +14,7 @@ const ShowroomPage = () => {
       <Listing />
       <CTA />
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

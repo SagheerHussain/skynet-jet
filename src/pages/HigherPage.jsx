@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Higher from "../components/Higher";
 import bgPlane from "/images/acquisition/banner.avif"; // Replace with your path
 import Gallary from "../components/Gallary";
+import ScrollToTop from "../components/ScrollToTop";
 
 const HigherPage = () => {
   return (
@@ -20,6 +21,7 @@ const HigherPage = () => {
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

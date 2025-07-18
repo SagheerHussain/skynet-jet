@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Brokerage from "../components/Brokerage";
 import bgPlane from "/images/brokerage/banner.avif"; // Replace with your path
+import ScrollToTop from "../components/ScrollToTop";
 
 const BrokeragePage = () => {
   return (
@@ -18,6 +19,7 @@ const BrokeragePage = () => {
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Team from "../components/Team";
 import bgPlane from "/images/team/banner.avif"; // Replace with your path
 import Contact from "../components/Contact";
+import ScrollToTop from "../components/ScrollToTop";
 
 const TeamPage = () => {
   return (
@@ -20,6 +21,7 @@ const TeamPage = () => {
       </section>
       <Contact />
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

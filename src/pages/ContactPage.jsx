@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import bgPlane from "/images/contact.png";
+import ScrollToTop from "../components/ScrollToTop";
 
 const ContactPage = () => {
   return (
@@ -21,8 +22,9 @@ const ContactPage = () => {
           <Navbar />
           <Contact />
         </div>
-      </section>
+      </section>  
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

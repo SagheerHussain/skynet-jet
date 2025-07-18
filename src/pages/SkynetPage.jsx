@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Skynet from "../components/Skynet";
 import bgPlane from "/images/skynet/banner.avif"; // Replace with your path
+import ScrollToTop from "../components/ScrollToTop";
 
 const SkynetPage = () => {
   return (

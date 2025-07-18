@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import About from "../components/About";
 import bgPlane from "/images/about/banner.avif"; // Replace with your path
+import ScrollToTop from "../components/ScrollToTop";
 
 const AboutPage = () => {
   return (
@@ -18,6 +19,7 @@ const AboutPage = () => {
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

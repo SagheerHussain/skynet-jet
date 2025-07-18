@@ -1,8 +1,28 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { HomePage, ShowroomPage, AcquisitionPage, BrokeragePage, SkynetPage, AboutPage, TestimonialPage, TeamPage, MemberDetailPage, HigherPage, ContactPage } from "./pages/index";
+import {
+  HomePage,
+  ShowroomPage,
+  AcquisitionPage,
+  BrokeragePage,
+  SkynetPage,
+  AboutPage,
+  TestimonialPage,
+  TeamPage,
+  MemberDetailPage,
+  HigherPage,
+  ContactPage,
+} from "./pages/index";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
   return (
     <>
       <Routes>

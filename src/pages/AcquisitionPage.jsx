@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Acquisition from "../components/Acquisition";
+import ScrollToTop from "../components/ScrollToTop";
 import bgPlane from "/images/acquisition/banner.avif"; // Replace with your path
 
 const AcquisitionPage = () => {
@@ -18,6 +19,7 @@ const AcquisitionPage = () => {
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

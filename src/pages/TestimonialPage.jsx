@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Reviews from "../components/Reviews";
 import bgPlane from "/images/brokerage/banner.avif"; // Replace with your path
+import ScrollToTop from "../components/ScrollToTop";
 
 const TestimonialPage = () => {
   return (
@@ -18,6 +19,7 @@ const TestimonialPage = () => {
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import SliderWrapper from '../components/SliderWrapper'
 import MeetTheTeam from '../components/MeetTheTeam'
 import Gallary from '../components/Gallary'
+import ScrollToTop from '../components/ScrollToTop'
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
       <Gallary />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </>
   )
 }
