@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="w-full px-6 text-white flex items-center justify-between z-20 h-[10vh]">
-      <div className="logo pt-10 ">
+      <div className="logo pt-10 z-[20]">
         <Link to={"/"}>
           <img
             src={

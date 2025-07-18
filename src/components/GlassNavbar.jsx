@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "../glass.css";
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
 const GlassPlayer = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null); // null | 'services' | 'about'
+  const [isClosing, setIsClosing] = useState(false);
+
+  const toggleDropdown = (menu) => {
+    setActiveDropdown((prev) => (prev === menu ? null : menu));
+  };
+
+  const handleMouseLeave = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setActiveDropdown(null); // trigger parent hide logic after animation
+    }, 300); // duration must match CSS
+  };
+
   return (
     <div className="mt-10 fixed z-[9999] xl:block hidden left-1/2 -translate-x-1/2">
-      {/* SVG filter definition */}
       <svg style={{ display: "none" }}>
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
           <feTurbulence
@@ -26,15 +40,18 @@ const GlassPlayer = () => {
         </filter>
       </svg>
 
-      <div className="container py-10 flex justify-center">
-        <div className="glass-container glass-container--rounded px-4 py-3">
+      <div
+        className={`relative container py-10 flex justify-center`}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="glass-container flex items-center justify-center glass-container--rounded px-4 py-3">
           <div className="glass-filter"></div>
           <div className="glass-overlay"></div>
           <div className="glass-specular"></div>
 
           <div className="glass-content glass-content--inline justify-center">
             <nav className="nav-menus">
-              <ul className="flex items-center justify-center gap-8">
+              <ul className="flex items-center justify-center gap-8 relative">
                 <li>
                   <Link
                     to="/showroom"
@@ -43,30 +60,35 @@ const GlassPlayer = () => {
                     Showroom
                   </Link>
                 </li>
+
                 <li>
-                  <a
-                    href="#"
-                    className="uppercase text-[.9rem] font-semibold transition hover:text-[#ff8a41]"
+                  <button
+                    onMouseEnter={() => toggleDropdown("services")}
+                    className={`uppercase text-[.9rem] font-semibold transition hover:text-[#ff8a41]`}
                   >
                     Services +
-                  </a>
+                  </button>
                 </li>
+
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/skynet"
                     className="uppercase text-[.9rem] font-semibold transition hover:text-[#ff8a41]"
                   >
                     Skynet
-                  </a>
+                  </Link>
                 </li>
+
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/about"
+                    onMouseEnter={() => toggleDropdown("about")}
                     className="uppercase text-[.9rem] font-semibold transition hover:text-[#ff8a41]"
                   >
                     About MA +
-                  </a>
+                  </Link>
                 </li>
+
                 <li>
                   <a
                     href="#"
@@ -79,6 +101,28 @@ const GlassPlayer = () => {
             </nav>
           </div>
         </div>
+
+        {/* === DROPDOWN OUTSIDE GLASS === */}
+        {activeDropdown && (
+          <Dropdown
+            items={
+              activeDropdown === "services"
+                ? [
+                    { text: "Acquisition", link: "/acquisition" },
+                    { text: "Brokerage", link: "/brokerage" },
+                  ]
+                : [
+                    { text: "Meet The Team", link: "/team" },
+                    { text: "Looking For Higher", link: "/higher" },
+                    { text: "Testimonials", link: "/testimonial" },
+                  ]
+            }
+            className={
+              activeDropdown === "services" ? "left-[25%]" : "left-[60%]"
+            }
+            onMouseLeave={() => setActiveDropdown(null)}
+          />
+        )}
       </div>
     </div>
   );

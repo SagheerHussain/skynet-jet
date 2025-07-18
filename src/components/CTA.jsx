@@ -16,13 +16,13 @@ const CTA = () => {
 const opacity = useTransform(scrollYProgress, [0, 0.5, 0.7, 1], [0, 1, 1, 0]);
 
   return (
-    <div ref={containerRef} className="relative h-[200vh] w-full">
+    <div ref={containerRef} className="relative 2xl:h-[200vh] h-[110vh] w-full">
       <motion.div
         style={{ scale, opacity }}
         className="sticky top-0 h-screen w-full flex items-center justify-center rounded-[50px] overflow-hidden"
       >
         <div
-          className="w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center rounded-[50px]"
+          className="w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center"
           style={{
             backgroundImage: `url(${cta})`,
           }}
