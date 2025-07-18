@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { HomePage, ShowroomPage, AcquisitionPage, BrokeragePage, SkynetPage, AboutPage, TestimonialPage, TeamPage, MemberDetailPage, HigherPage } from "./pages/index";
+import { HomePage, ShowroomPage, AcquisitionPage, BrokeragePage, SkynetPage, AboutPage, TestimonialPage, TeamPage, MemberDetailPage, HigherPage, ContactPage } from "./pages/index";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/team/:id" element={<MemberDetailPage />} />
         <Route path="/higher" element={<HigherPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </>
   );

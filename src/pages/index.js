@@ -8,6 +8,7 @@ import TestimonialPage from "./TestimonialPage";
 import TeamPage from "./TeamPage";
 import MemberDetailPage from "./MemberDetailPage";
 import HigherPage from "./HigherPage";
+import ContactPage from "./ContactPage";
 
 export {
     HomePage,
@@ -19,5 +20,6 @@ export {
     TestimonialPage,
     TeamPage,
     HigherPage,
-    MemberDetailPage
+    MemberDetailPage,
+    ContactPage
 };

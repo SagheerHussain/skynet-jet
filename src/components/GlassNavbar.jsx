@@ -90,12 +90,12 @@ const GlassPlayer = () => {
                 </li>
 
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/contact"
                     className="uppercase text-[.9rem] font-semibold transition hover:text-[#ff8a41]"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

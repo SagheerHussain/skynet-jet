@@ -16,16 +16,9 @@ const Contact = () => {
     <>
       <section
         id="contact"
-        style={{
-          background:
-            `url(${contactBanner})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-        className="bg-cover relative z-[1]"
+        className="bg-cover relative z-[1] pt-10"
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[0]"></div>
+        {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80 z-[0]"></div> */}
         {/* Contact Section */}
         <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
