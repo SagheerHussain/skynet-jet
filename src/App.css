@@ -470,3 +470,18 @@ body {
   width: 0px;
 }
 
+.MuiAccordion-root {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.MuiAccordionSummary-content {
+  justify-content: center !important;
+  color: #ffffff !important;
+  margin-left: 3rem !important;
+}
+.MuiTypography-root {
+  font-size: 1.8rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  font-family: "Asta Sans", sans-serif !important;
+}
