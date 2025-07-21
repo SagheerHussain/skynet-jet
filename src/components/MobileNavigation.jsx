@@ -1,20 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import { FaPlus } from "react-icons/fa6";
+import { FaXmark } from "react-icons/fa6";
 
 const MobileNavigation = ({ isOpen, setIsOpen }) => {
   return (
     <>
-      <div className="fixed top-0 left-0 w-screen z-[99999] transition duration-200">
+      <div className="fixed top-0 left-0 w-screen z-[99999]">
         <div
-          className={`glass-container flex items-center justify-center glass-container--rounded px-4 py-3 ${
-            isOpen ? "h-screen" : "h-0"
-          } transition duration-200`}
+          className={`glass-container flex items-center h-screen justify-center glass-container--rounded px-4 py-3 transition-all duration-300 ease-in-out transform ${
+            isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+          }`}
         >
           <div
             className="glass-filter"
@@ -25,6 +24,13 @@ const MobileNavigation = ({ isOpen, setIsOpen }) => {
 
           <div className="glass-content glass-content--inline flex-col justify-center">
             <div className="nav-menus flex-col flex gap-8">
+              <div className="flex items-center justify-end">
+                <FaXmark
+                  onClick={() => setIsOpen(false)}
+                  size={22}
+                  color="#fff"
+                />
+              </div>
               <Link
                 to="/"
                 className="uppercase text-3xl hover:text-tertiary_color transition duration-50"

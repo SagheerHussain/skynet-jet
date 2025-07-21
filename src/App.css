@@ -485,3 +485,16 @@ body {
   text-transform: uppercase;
   font-family: "Asta Sans", sans-serif !important;
 }
+
+.slide-in {
+  transform: translateY(0%);
+  transition: 0.4s ease-in-out;
+}
+.slide-out {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.MuiAccordion-gutters::before {
+  display: none !important;
+}
