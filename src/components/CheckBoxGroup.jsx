@@ -6,14 +6,14 @@ const CheckBoxGroup = ({ title, items, selected, onChange }) => {
       <h4 className="text-white text-sm font-semibold mb-4">{title}</h4>
       <ul className="space-y-2">
         {items.map((item) => {
-          const isChecked = selected.includes(item);
+          const isChecked = title === "Categories" ? selected.includes(item.slug) : selected.includes(item);
           return (
             <li key={item}>
               <label className="relative flex items-center cursor-pointer mb-4">
                 <input
                   type="checkbox"
                   checked={isChecked}
-                  onChange={() => onChange(item)}
+                  onChange={() => title === "Categories" ? onChange(item.slug) : onChange(item)}
                   className="sr-only"
                 />
                 <div
@@ -40,7 +40,13 @@ const CheckBoxGroup = ({ title, items, selected, onChange }) => {
                     </svg>
                   )}
                 </div>
-                <span className="text-white text-base ms-3">{item}</span>
+                {
+                  title === "Categories" ? (
+                    <span className="text-white text-base ms-3">{item.name}</span>
+                  ) : (
+                    <span className="text-white text-base ms-3">{item}</span>
+                  )
+                }
               </label>
             </li>
           );

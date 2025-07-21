@@ -3,6 +3,7 @@ import teamBanner from "/images/meet-team.png";
 import { motion } from "framer-motion";
 import Button from "./Button";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const MeetTheTeam = () => {
   const words = [
@@ -14,11 +15,14 @@ const MeetTheTeam = () => {
     },
   ];
 
+  const media = useMediaQuery("(max-width: 768px)");
+
+
   return (
     <>
       <section id="meetTheTeam" className="py-20">
         <div className="container px-5">
-          <h2 className="text-7xl font-extrabold uppercase opacity-30 flex items-center">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-extrabold uppercase opacity-30 flex items-center">
             <span
               className="text-transparent stroke-text"
               style={{
@@ -30,8 +34,8 @@ const MeetTheTeam = () => {
             <TypewriterEffectSmooth words={words} />
           </h2>
 
-          <div className="flex items-center justify-center">
-            <div className="team-content w-[30%]">
+          <div className="md:flex items-center justify-center">
+            <div className="team-content md:w-[40%] lg:w-[30%]">
               <div className="glass-container glass-container--rounded px-4 py-3">
                 <div className="glass-filter"></div>
                 <div className="glass-overlay"></div>
@@ -39,9 +43,9 @@ const MeetTheTeam = () => {
 
                 <div className="glass-content glass-content--inline justify-center">
                   <div className="team-content--inner">
-                    <h2 className="text-white lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight text-center space-y-2">
+                    <h2 className="text-white md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight text-center space-y-2">
                       <motion.span
-                        initial={{ y: -40, opacity: 0 }}
+                        initial={{ y: media ? -20 : -40, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: false }}
                         transition={{
@@ -55,7 +59,7 @@ const MeetTheTeam = () => {
                       </motion.span>
 
                       <motion.span
-                        initial={{ y: -100, opacity: 0 }}
+                        initial={{ y: media ? -30 : -50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: false }}
                         transition={{
@@ -69,7 +73,7 @@ const MeetTheTeam = () => {
                       </motion.span>
 
                       <motion.span
-                        initial={{ y: -100, opacity: 0 }}
+                        initial={{ y: media ? -40 : -100, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: false }}
                         transition={{
@@ -83,7 +87,7 @@ const MeetTheTeam = () => {
                       </motion.span>
 
                       <motion.span
-                        initial={{ y: -100, opacity: 0 }}
+                        initial={{ y: media ? -50 : -100, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: false }}
                         transition={{
@@ -103,7 +107,7 @@ const MeetTheTeam = () => {
                 <Button buttonLabel="Meet The Team" isWidthFull={true} onClick="/team" />
               </div>
             </div>
-            <div className="team-banner w-[70%] grayscale-[100%] hover:grayscale-0 transition-all duration-500">
+            <div className="team-banner md:w-[60%] lg:w-[70%] grayscale-[100%] hover:grayscale-0 transition-all duration-500">
               <img src={teamBanner} alt="" />
             </div>
           </div>

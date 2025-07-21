@@ -4,6 +4,8 @@ import FilterCheckboxList from "./FilterCheckboxList";
 import Card from "./Card";
 import Tabs from "./Tabs";
 import Pagination from "./Pagination";
+import { GoFilter } from "react-icons/go";
+import FilterSideBar from "./FilterSideBar";
 
 const airplanes = [
   {
@@ -194,6 +196,8 @@ const Listing = () => {
     setCurrentPage(1);
   }, [selectedFilters, priceRange, activeTab]);
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section id="showroom" className="py-20">
       <div className="container px-6">
@@ -210,7 +214,7 @@ const Listing = () => {
         </div>
 
         {/* Tabs */}
-        <div className="animated-tabs mb-12">
+        <div className="lg:block hidden animated-tabs mb-12">
           <Tabs
             categories={categories}
             activeTab={activeTab}
@@ -218,8 +222,12 @@ const Listing = () => {
           />
         </div>
 
+        <div className="filter mb-4 lg:hidden flex justify-end">
+          <GoFilter onClick={() => setIsOpen(!isOpen)} className="text-white cursor-pointer" size={36} />
+        </div>
+
         <div className="flex">
-          <div className="w-[20%]">
+          <div className="lg:block hidden w-[20%]">
             <FilterCheckboxList
               selected={selectedFilters}
               setSelected={setSelectedFilters}
@@ -228,16 +236,33 @@ const Listing = () => {
               minPrice={minPrice}
               maxPrice={maxPrice}
               categories={categories}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
             />
           </div>
-          <div className="w-[75%] ms-[5%]">
+
+          <div className="block">
+          <FilterSideBar
+  selectedFilters={selectedFilters}
+  setSelectedFilters={setSelectedFilters}
+  priceRange={priceRange}
+  setPriceRange={setPriceRange}
+  minPrice={minPrice}
+  maxPrice={maxPrice}
+  categories={categories}
+  isOpen={isOpen}
+  setIsOpen={setIsOpen}
+/>
+          </div>
+
+          <div className="w-full lg:w-[75%] lg:ms-[5%]">
             {filteredAirplanes.length === 0 ? (
               <div className="flex justify-center items-center">
                 <p className="text-white text-lg">No data found.</p>
               </div>
             ) : (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {paginatedAirplanes.map((airplane) => (
                     <Card key={airplane._id} detail={airplane} />
                   ))}

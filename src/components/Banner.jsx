@@ -17,7 +17,7 @@ const Banner = ({ url }) => {
         }}
       >
         <div className="overlay bg-black opacity-60 absolute top-0 left-0 w-full h-full z-[-1]"></div>
-        <div className="container">
+        <div className="container px-5">
           <Navbar />
           <div className="banner-content flex flex-col items-center justify-center h-[70vh] z-[2]">
             {/* <h1 className="text-white text-6xl font-bold">Discover the Future of Flight</h1> */}
@@ -26,7 +26,7 @@ const Banner = ({ url }) => {
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-6xl font-bold text-white"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
             />
             <ShinyText
               text="Experience the thrill of aviation like never before"

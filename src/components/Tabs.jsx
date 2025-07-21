@@ -63,7 +63,7 @@ const styles = {
   },
   tab: {
     position: "relative",
-    padding: "10px 20px",
+    padding: "10px 15px",
     cursor: "pointer",
     borderRadius: "50px",
   },

@@ -466,3 +466,7 @@ body {
 .swiper-button-next::after {
   transform: translateX(-10px);
 }
+.filter-sidebar::-webkit-scrollbar {
+  width: 0px;
+}
+

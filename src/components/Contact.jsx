@@ -35,7 +35,7 @@ const Contact = () => {
         {/* Contact Section */}
         <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
-          <div className="p-8 relative rounded-2xl shadow-md">
+          <div className="relative rounded-2xl shadow-md md:h-auto h-[500px]">
             <div
               className="liquid-glass flex flex-col justify-center"
               style={{ padding: "20px 40px" }}

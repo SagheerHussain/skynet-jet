@@ -17,7 +17,7 @@ const Higher = () => {
         <div className="glass-specular"></div>
 
         <div className="glass-content glass-content--inline text-start">
-          <div className="p-8 w-[90%] md:w-[100%] text-white">
+          <div className="md:p-8 py-8 px-2 w-[90%] md:w-[100%] text-white">
             <h2 className="text-2xl md:text-3xl font-bold text-tertiary_color mb-2">
               Looking For Higher On Youtube
             </h2>

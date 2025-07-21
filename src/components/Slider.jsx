@@ -115,7 +115,10 @@ const Slider = () => {
                 <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
 
                 {/* Animated Content */}
-                <div key={activeIndex} className="ms-auto w-[40%]">
+                <div
+                  key={activeIndex}
+                  className="ms-auto w-full md:w-[60%] lg:w-[40%]"
+                >
                   {/* PURPLE BOX (Title) */}
                   <div className="w-full h-[150px] relative z-[9999]">
                     <motion.div
@@ -149,7 +152,7 @@ const Slider = () => {
                   </div>
 
                   {/* YELLOW BOXES */}
-                  <div className="flex gap-4 my-4">
+                  <div className="flex flex-row gap-4 my-4">
                     {/* Logo Box */}
                     <motion.div
                       className="w-1/2 h-[150px] relative z-[9999]"
@@ -176,7 +179,7 @@ const Slider = () => {
                         >
                           <img
                             src="https://static.wixstatic.com/media/04f737_e93964b7810f46d7bab986687486d898~mv2.png/v1/fill/w_180,h_65,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/04f737_e93964b7810f46d7bab986687486d898~mv2.png"
-                            className="max-w-[200px] max-h-[70px] scale-[.85]"
+                            className="max-w-[100px] max-h-[40px] sm:max-w-[180px] md:max-w-[200px] md:max-h-[60px] lg:max-h-[50px] xl:max-h-[70px] lg:scale-[.85]"
                             alt=""
                             loading="lazy"
                           />

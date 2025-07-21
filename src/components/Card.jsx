@@ -35,7 +35,11 @@ const Card = ({ detail, index }) => {
     >
       {/* Featured Ribbon */}
       <div
-        className={`absolute top-6 -right-14 w-48 text-center rotate-45 bg-gradient-to-r ${gradient[0]} ${gradient[1]} ${categoryName === 'for-sale' ? 'text-black' : 'text-white'} font-medium py-1 shadow-lg`}
+        className={`absolute top-6 -right-14 w-48 text-center rotate-45 bg-gradient-to-r ${
+          gradient[0]
+        } ${gradient[1]} ${
+          categoryName === "for-sale" ? "text-black" : "text-white"
+        } font-medium py-1 shadow-lg`}
       >
         <h1 className="text-[.8rem]">
           {detail?.category
@@ -81,7 +85,7 @@ const Card = ({ detail, index }) => {
         </div>
 
         <div className="mt-4 flex items-center justify-between gap-4">
-          <div className="airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
+          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
             <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
               Airframe
             </span>
@@ -89,7 +93,7 @@ const Card = ({ detail, index }) => {
               {detail?.airframe}
             </span>
           </div>
-          <div className="airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
+          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
             <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
               Engine
             </span>
@@ -97,7 +101,7 @@ const Card = ({ detail, index }) => {
               {detail?.engine}
             </span>
           </div>
-          <div className="airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
+          <div className="w-[33%] airframe flex flex-col items-center gap-2 bg-[#262626] py-2 rounded-lg">
             <span className="text-white 2xl:px-4 xl:px-3 lg:px-2 xl:text-[.8rem] lg:text-[.6rem] rounded-full">
               Propeller
             </span>

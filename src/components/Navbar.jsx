@@ -77,7 +77,7 @@ const Navbar = () => {
       </div> */}
 
       <GlassNavbar />
-      <div className="flex items-center call-to-action mt-10">
+      <div className="flex items-center call-to-action mt-10 z-[999]">
         <SearchBox />
         <TbMenu size={40} className="ms-4 xl:hidden block" color="#fff" />
       </div>
