@@ -41,7 +41,7 @@ const SearchBox = () => {
               />
 
               {/* Button */}
-              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-[#ff8a41] hover:bg-[#ff8a41]/80 transition">
+              <button className="w-10 h-10 flex items-center justify-center rounded-full bg-tertiary_color hover:bg-tertiary_color/80 transition">
                 <FaSearch className="text-white" />
               </button>
             </div>

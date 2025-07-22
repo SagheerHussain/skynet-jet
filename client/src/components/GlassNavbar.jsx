@@ -19,7 +19,7 @@ const GlassPlayer = () => {
   };
 
   return (
-    <div className="mt-10 fixed z-[9999] xl:block hidden left-1/2 -translate-x-1/2">
+    <div className="fixed z-[9999] xl:block hidden left-1/2 -translate-x-1/2">
       <svg style={{ display: "none" }}>
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
           <feTurbulence
@@ -45,7 +45,10 @@ const GlassPlayer = () => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="glass-container flex items-center justify-center glass-container--rounded px-4 py-3">
-          <div className="glass-filter"></div>
+          <div
+            className="glass-filter"
+            style={{ filter: "url(#lg-dist)" }}
+          ></div>
           <div className="glass-overlay"></div>
           <div className="glass-specular"></div>
 

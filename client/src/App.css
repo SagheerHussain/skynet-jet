@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 body {
-  font-family: "Asta Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
   overflow-x: hidden;
   background-color: #111218;
 }
@@ -20,16 +22,17 @@ body {
   clip-path: ellipse(52% 70% at 9% 46%);
 }
 
+
 .btn-main {
   position: relative;
   color: #fff;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   overflow: hidden;
-  background: #ffffff1a;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  background: #ffffff04;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.179);
   border-radius: 30px;
 }
-.btn-main::before {
+/* .btn-main::before {
   content: "";
   position: absolute;
   top: 0;
@@ -38,7 +41,7 @@ body {
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
   z-index: -1;
-}
+} */
 .btn-main::after {
   content: "";
   position: absolute;
@@ -458,7 +461,6 @@ body {
 .swiper-button-next::after {
   color: #ffffff;
   font-size: 16px !important;
-
 }
 .swiper-button-prev::after {
   transform: translateX(10px);
@@ -497,4 +499,23 @@ body {
 }
 .MuiAccordion-gutters::before {
   display: none !important;
+}
+
+.glassmorphism_effect_hover {
+  background-color: #25262b;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  transition: all 0.5s ease;
+  transform: scale(0);
+}
+
+.glassmorphism_card:hover .glassmorphism_effect_hover {
+  transform: scale(1);
+}
+
+.glassmorphism_effect_line {
+  transition: all 0.5s ease;
 }

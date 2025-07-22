@@ -13,7 +13,7 @@ const Dropdown = ({ items = [], className, onMouseLeave }) => {
 
   return (
     <div
-      className={`absolute top-full ${className} mt-3 rounded-lg z-[99999] min-w-[200px] ${
+      className={`absolute top-full ${className} mt-2 rounded-lg min-w-[200px] ${
         isClosing ? "dropdown-animate-out" : "dropdown-animate-in"
       }`}
       onMouseLeave={handleMouseLeave}
@@ -27,14 +27,14 @@ const Dropdown = ({ items = [], className, onMouseLeave }) => {
         <div className="glass-specular"></div>
 
         <div
-          className="glass-content glass-content--inline flex flex-col mt-2"
+          className="glass-content glass-content--inline flex flex-col z-[99999]"
           style={{ alignItems: "start", justifyContent: "start" }}
         >
           {items.map((item, idx) => (
             <Link
               key={idx}
               to={item.link}
-              className="uppercase block px-4 py-2 text-white duration-150 mb-3 transition hover:text-[#ff8a41]"
+              className="uppercase block px-4 py-4 my-2 text-white duration-150 transition hover:text-[#ff8a41]"
             >
               {item.text}
             </Link>

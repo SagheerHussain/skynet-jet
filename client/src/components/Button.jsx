@@ -11,7 +11,7 @@ export default function Button({
         className={`${isWidthFull ? "btn-main w-full" : "btn-main"} ${
           isNormalPedding
             ? "py-[.5rem] px-[1.5rem] text-sm capitalize"
-            : "py-[1rem] px-[2rem] text-base uppercase"
+            : "py-[1rem] px-[2rem] text-base"
         }`}
       >
         {/* Background layers */}

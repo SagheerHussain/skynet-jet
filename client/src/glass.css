@@ -7,19 +7,25 @@
   color: var(--lg-text);
   background: transparent;
   border-radius: 50px;
-  overflow: hidden !important;  
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.02), 0 0 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
   border: 1px solid #bebdbd39;
+  overflow: hidden !important;
 }
+
+/* @media screen and (max-width: 768px) {
+  .glass_card {
+    overflow: visible !important;
+  }
+} */
 
 /* ========== GLASS LAYERS ========== */
 .glass-filter {
   position: absolute;
   inset: 0;
   z-index: 0;
-  backdrop-filter: blur(2px);
-  filter: url(#lg-dist);
+  backdrop-filter: blur(3px);
+  
   isolation: isolate;
 }
 
@@ -48,6 +54,7 @@
   align-items: center;
   gap: 0px;
   padding: 1rem 0.9rem;
+  height: 100%;
 }
 
 .glass-content--inline {
